@@ -6,3 +6,8 @@ out/
 out
 target
 target/
+gradlew
+gradlew.bat
+build/
+*.mv.db
+*.trace.db

@@ -1,17 +1,17 @@
 package br.com.horys.apipagamento.requests;
 
-public class UsuarioRequest {
+public class UsuarioPostRequest {
     private Long id;
     private String nome;
     private String endereco;
 
-    public UsuarioRequest(Long id, String nome, String endereco) {
+    public UsuarioPostRequest(Long id, String nome, String endereco) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
     }
 
-    public UsuarioRequest() {
+    public UsuarioPostRequest() {
     }
 
     public Long getId() {
@@ -37,4 +37,6 @@ public class UsuarioRequest {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
+
 }
