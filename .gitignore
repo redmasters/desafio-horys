@@ -1,0 +1,8 @@
+.gradle/
+.gradle
+.idea/
+.idea
+out/
+out
+target
+target/
