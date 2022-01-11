@@ -1,7 +1,5 @@
 package br.com.horys.apipagamento.model;
 
-import org.hibernate.annotations.Comment;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

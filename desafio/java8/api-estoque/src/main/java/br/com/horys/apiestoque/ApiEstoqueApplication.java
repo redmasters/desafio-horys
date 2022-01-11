@@ -1,4 +1,4 @@
-package br.com.horys.apipagamento;
+package br.com.horys.apiestoque;
 
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
@@ -6,10 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableRabbit
 @SpringBootApplication
-public class ApiPagamentoApplication {
+public class ApiEstoqueApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ApiEstoqueApplication.class, args);
 
-	public static void main(String[] args) {
-		SpringApplication.run(ApiPagamentoApplication.class, args);
-	}
-
+    }
 }
