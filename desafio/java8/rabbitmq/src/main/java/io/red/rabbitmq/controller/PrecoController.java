@@ -1,8 +1,7 @@
 package io.red.rabbitmq.controller;
 
-import io.red.rabbitmq.constantes.RabbitMQConstantes;
-import io.red.rabbitmq.dto.EstoqueDto;
-import io.red.rabbitmq.dto.PrecoDto;
+import constantes.RabbitMQConstantes;
+import dto.PrecoDto;
 import io.red.rabbitmq.services.RabbitMQService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +18,7 @@ public class PrecoController {
     private RabbitMQService rabbitMQService;
 
     @PutMapping
-    private ResponseEntity alteraPreco(@RequestBody PrecoDto precoDto){
+    private ResponseEntity alteraPreco(@RequestBody PrecoDto precoDto) {
         this.rabbitMQService.enviaMensagem(RabbitMQConstantes.FILA_PRECO, precoDto);
         return new ResponseEntity(HttpStatus.OK);
     }

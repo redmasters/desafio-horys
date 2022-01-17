@@ -1,7 +1,7 @@
 package io.red.rabbitmq.controller;
 
-import io.red.rabbitmq.constantes.RabbitMQConstantes;
-import io.red.rabbitmq.dto.EstoqueDto;
+import constantes.RabbitMQConstantes;
+import dto.EstoqueDto;
 import io.red.rabbitmq.services.RabbitMQService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

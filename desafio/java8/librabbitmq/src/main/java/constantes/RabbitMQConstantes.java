@@ -1,4 +1,4 @@
-package io.red.rabbitmq.constantes;
+package constantes;
 
 public class RabbitMQConstantes {
     public static final String FILA_ESTOQUE = "ESTOQUE";

@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'org.librabbitmq'
+version '1.1'
+
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.librabbitmq'
+            artifactId = 'library'
+            version = '1.1'
+
+            from components.java
+        }
+    }
+}
+
+
+test {
+    useJUnitPlatform()
+}

@@ -1,4 +1,4 @@
-package io.red.rabbitmq.dto;
+package dto;
 
 import java.io.Serializable;
 
