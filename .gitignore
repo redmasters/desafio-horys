@@ -10,4 +10,5 @@ gradlew
 gradlew.bat
 build/
 *.mv.db
+*.lock.db
 *.trace.db
