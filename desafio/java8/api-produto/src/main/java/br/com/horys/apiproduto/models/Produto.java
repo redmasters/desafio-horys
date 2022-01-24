@@ -1,17 +1,21 @@
-package br.com.horys.apiestoque.models;
+package br.com.horys.apiproduto.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.math.BigDecimal;
 
 @Entity
-@Table(name = "estoque")
-public class Estoque {
+@Table(name = "produto")
+public class Produto {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private String id;
 
     @Column(name = "nome")
     private String nome;
@@ -19,24 +23,24 @@ public class Estoque {
     @Column(name = "categoria")
     private String categoria;
 
-    @Column(name = "codigo")
-    private Long codigo;
+    @Column(name = "preco")
+    private BigDecimal preco;
 
-    public Estoque() {
+    public Produto() {
     }
 
-    public Estoque(Long id, String nome, String categoria, Long codigo) {
+    public Produto(String id, String nome, String categoria, BigDecimal preco) {
         this.id = id;
         this.nome = nome;
         this.categoria = categoria;
-        this.codigo= codigo;
+        this.preco = preco;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -56,11 +60,11 @@ public class Estoque {
         this.categoria = categoria;
     }
 
-    public Long getCodigo() {
-        return codigo;
+    public BigDecimal getPreco() {
+        return preco;
     }
 
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
     }
 }

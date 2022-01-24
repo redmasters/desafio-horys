@@ -23,3 +23,5 @@ spring:
 
 queue:
   name: teste
+server:
+  port: 8070
