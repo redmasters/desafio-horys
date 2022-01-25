@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+  application:
+    name: api-pagamento
+
+  datasource:
+    username: sa
+    password: password
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  port: 0
